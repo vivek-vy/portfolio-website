@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfolio website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a6a0f05576.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -36,7 +37,7 @@
                 <p>hlw my self vivek yadav Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quam inventore dolorem eius aut, placeat eum quibusdam facere minima exercitationem dolorum consectetur harum magnam enim quasi aspernatur, libero, ad officiis?</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skillls')">skills</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
                     <p class="tab-links" onclick="opentab('experience')">experience</p>
                     <p class="tab-links" onclick="opentab('education')">education</p>
                 </div>
@@ -54,33 +55,59 @@
                     <li></l><span></span><br></li>
                     <li></l><span></span><br></li>
                 </ul>
-        </div><div class="tab-contents" id="education">
+        </div>
+        <div class="tab-contents" id="education">
             <ul>
                 <li></l><span>2023-current</span><br>MCA from bu university</li>
                 <li></l><span>2020-2023</span><br>bsc(computer science)</li>
                 <li></l><span>2019-2020</span><br>12th from mpboard</li>
             </ul>
-    </div>
-        </div>
         </div>
     </div>
-
-<script>
-
+</div>
+</div>
+<!-- ------services------ -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">my services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>web design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum, expedita nemo cupiditate vitae exercitationem laboriosam. Impedit numquam itaque ipsum. Excepturi accusantium maiores est vero tempora voluptatum, tenetur enim cupiditate!</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>ui/ux design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum, expedita nemo cupiditate vitae exercitationem laboriosam. Impedit numquam itaque ipsum. Excepturi accusantium maiores est vero tempora voluptatum, tenetur enim cupiditate!</p>
+                 <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>app design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum, expedita nemo cupiditate vitae exercitationem laboriosam. Impedit numquam itaque ipsum. Excepturi accusantium maiores est vero tempora voluptatum, tenetur enim cupiditate!</p>
+                 <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classlist.remove("active-link")
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
-                tabcontent.classlist.remove("active-tab")
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
             }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link"); 
+            
         }
-
-
-</script>
-
+    </script>
+    
 </body>
 </html>
