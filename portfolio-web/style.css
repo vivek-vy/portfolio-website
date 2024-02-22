@@ -4,6 +4,9 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
  body{
     background-color: rgb(19, 19, 19);
     color:rgb(238, 229, 229) ;
@@ -303,12 +306,80 @@ form .btn2{
   width:100%;
   text-align: center;
   padding: 25px;
-  background: #0a9ae8;
-  -webkit-text-fill-color:red ;
+  background: #3d4345;
+  -webkit-text-fill-color:rgb(248, 10, 10) ;
   text-decoration-style: solid;
   font-weight:300 ;
   margin-top: 20px;
 }
 .copyright i{
   color: #11e431;
+}
+/* -----------CSS for small screens */
+nav .fa-solid{
+  display: none;
+}
+@media only screen and (max-width:600px){
+  #header{
+    background-image: url(images/photos-background.png);
+  }
+  .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+  nav .fa-solid{
+    display: block;
+    font-size: 25px;
+  }
+  nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title{
+    font-size: 38px;
+  }
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+  margin-bottom:30px ;
+  }
+  .about-col-2{
+    font-size: 14px;
+  }
+  .tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+  .copyright{
+    font-size: 14px;
+  }
+}
+#msg {
+  color: #e4188f;
+  margin-top: -40px;
+  display: block;
 }
