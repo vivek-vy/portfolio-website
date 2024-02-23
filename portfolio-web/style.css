@@ -206,7 +206,7 @@ color: #ababab;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 20px;
   text-align: center;
   font-size: 14px;
   transition: height 0.5s;
